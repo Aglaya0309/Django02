@@ -1,0 +1,73 @@
+{% extends 'myapp/base.html' %}
+
+{% block title %}Главная - Магазин тканей{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="jumbotron bg-light p-5 rounded">
+        <h1 class="display-4">Добро пожаловать в мир тканей!</h1>
+        <p class="lead">Лучшие натуральные ткани для вашего творчества</p>
+        <hr class="my-4">
+        <p>Выберите тип ткани, чтобы узнать больше:</p>
+    </div>
+
+    <div class="row mt-4">
+        <!-- Хлопок -->
+        <div class="col-md-3 mb-4">
+            <div class="card h-100">
+                <img src="https://sun1-25.userapi.com/2DHMqIOburiIEj8piWDGqOGrFkDIw_RJxO5epg/9100XyJiDSU.jpg" class="card-img-top" alt="Хлопок">
+                <div class="card-body">
+                    <h5 class="card-title">Хлопок</h5>
+                    <p class="card-text">Натуральная ткань растительного происхождения.</p>
+                    <a href="/cotton/" class="btn btn-primary">Подробнее</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Шёлк -->
+        <div class="col-md-3 mb-4">
+            <div class="card h-100">
+                <img src="https://avatars.mds.yandex.net/i?id=4771ec53a375d151e95c659949526904_l-3949150-images-thumbs&n=13" class="card-img-top" alt="Шёлк">
+                <div class="card-body">
+                    <h5 class="card-title">Шёлк</h5>
+                    <p class="card-text">Роскошная ткань животного происхождения.</p>
+                    <a href="/silk/" class="btn btn-primary">Подробнее</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Шерсть -->
+        <div class="col-md-3 mb-4">
+            <div class="card h-100">
+                <img src="https://avatars.mds.yandex.net/i?id=756d8c79576175dabca98ecfa33513c6_l-8497333-images-thumbs&n=13" class="card-img-top" alt="Шерсть">
+                <div class="card-body">
+                    <h5 class="card-title">Шерсть</h5>
+                    <p class="card-text">Тёплая натуральная ткань для холодного сезона.</p>
+                    <a href="/wool/" class="btn btn-primary">Подробнее</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Лён -->
+        <div class="col-md-3 mb-4">
+            <div class="card h-100">
+                <img src="https://cs5.livemaster.ru/storage/a8/74/294df45e8f1d647c1794de2a846e--materialy-dlya-tvorchestva-tkan-len-hlopok-tsvetnoj-3-shirina.jpg" class="card-img-top" alt="Лён">
+                <div class="card-body">
+                    <h5 class="card-title">Лён</h5>
+                    <p class="card-text">Прочная и дышащая натуральная ткань.</p>
+                    <a href="/linen/" class="btn btn-primary">Подробнее</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-12">
+            <div class="alert alert-info">
+                <h4 class="alert-heading">Специальное предложение!</h4>
+                <p>При заказе от 5 метров любой ткани - скидка 10%</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

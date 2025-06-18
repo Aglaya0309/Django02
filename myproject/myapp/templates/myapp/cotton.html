@@ -1,0 +1,56 @@
+{% extends 'myapp/base.html' %}
+
+{% block title %}Хлопок - Ткани мира{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="https://ir.ozone.ru/s3/multimedia-9/w1200/6651261333.jpg" alt="Хлопок" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-md-6">
+            <h1 class="mb-4">Хлопковая ткань</h1>
+
+            <div class="card mb-4">
+                <div class="card-header bg-primary text-white">
+                    <h5>Основные преимущества</h5>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">✅ 100% натуральный материал</li>
+                        <li class="list-group-item">✅ Отличная воздухопроницаемость</li>
+                        <li class="list-group-item">✅ Гипоаллергенность</li>
+                        <li class="list-group-item">✅ Лёгкость в уходе</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card mb-4">
+                <div class="card-header bg-primary text-white">
+                    <h5>Характеристики</h5>
+                </div>
+                <div class="card-body">
+                    <table class="table">
+                        <tr>
+                            <th>Плотность</th>
+                            <td>120-180 г/м²</td>
+                        </tr>
+                        <tr>
+                            <th>Страна производства</th>
+                            <td>Узбекистан, Египет, Индия</td>
+                        </tr>
+                        <tr>
+                            <th>Рекомендации</th>
+                            <td>Стирка при 40°C</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <a href="/" class="btn btn-primary btn-lg">На главную</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
