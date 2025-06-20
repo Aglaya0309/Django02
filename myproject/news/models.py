@@ -1,10 +1,10 @@
 from django.db import models
-from django.contrib.auth.models import User  # Импорт модели пользователя
-from django.utils import timezone  # Для установки даты по умолчанию
+from django.contrib.auth.models import User
+from django.utils import timezone
 
 
 class News_post(models.Model):
-    # Текстовые поля
+
     title = models.CharField(
         max_length=100,
         verbose_name='Заголовок новости',
@@ -14,38 +14,38 @@ class News_post(models.Model):
     short_description = models.CharField(
         max_length=200,
         verbose_name='Краткое описание',
-        blank=True  # Необязательное поле
+        blank=True
     )
 
     text = models.TextField(
         verbose_name='Полный текст новости'
     )
 
-    # Даты и время
+
     pub_date = models.DateTimeField(
         verbose_name='Дата публикации',
-        default=timezone.now  # Автоматическая установка текущего времени
+        default=timezone.now
     )
 
-    # Связь с пользователем
+
     author = models.ForeignKey(
         User,
-        on_delete=models.CASCADE,  # При удалении пользователя удалятся его новости
+        on_delete=models.CASCADE,
         verbose_name='Автор',
-        related_name='news_posts'  # Для обратных запросов
+        related_name='news_posts'
     )
 
-    # Дополнительные поля (по желанию)
+
     is_published = models.BooleanField(
         default=True,
         verbose_name='Опубликовано'
     )
 
-    # Методы
+
     def __str__(self):
-        return self.title  # Для красивого отображения в админке
+        return self.title
 
     class Meta:
-        verbose_name = 'Новость'  # Название в единственном числе
-        verbose_name_plural = 'Новости'  # Название во множественном числе
-        ordering = ['-pub_date']  # Сортировка по дате (новые сначала)
+        verbose_name = 'Новость'
+        verbose_name_plural = 'Новости'
+        ordering = ['-pub_date']  
